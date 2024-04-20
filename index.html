@@ -1,58 +1,45 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="styles.css" />
-    <title>My weather application</title>
-  </head>
-  <body>
-    <div class="weather-app">
-      <header>
-        <form id="search-form">
-          <input
-            type="search"
-            placeholder="Enter a city.."
-            required
-            class="search-input"
-            id="search-input"
-          />
-          <input type="submit" value="Search" class="search-button" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="weatherbox">
+        <form class="form" id="searchForm">
+            <input class="search-input" type="text" placeholder="Enter a city..." />
+            <input class="btn-submit" type="submit" value="search" />
         </form>
-      </header>
-      <main>
-        <div class="current-weather">
-          <div>
-            <h1 class="current-city" id="current-city">Paris</h1>
-            <p class="current-details">
-              <span id="current-date"></span>, moderate rain <br />
-              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
-            </p>
-          </div>
-          <div class="current-temperature">
-            <span class="current-temperature-icon">☀️</span
-            ><span class="current-temperature-value" id="current-temperature"
-              >24</span
-            ><span class="current-temperature-unit">°C</span>
-          </div>
+        <div class="weather-properties">
+            <div class="city-props">
+                <h1 class="city-name">Mauritius</h1>
+                <div class="city-time">Saturday 15:32, moderate rain</div>
+                <div class="weatherProps">
+                    <div>Humidity: <strong class="humidity" > 87%</strong></div> 
+                    <div>Wind:<strong class="wind"> 7.2km/h</strong></div>
+                </div>
+            </div>
+            <div class="temperature">
+                <span class="emoji">☀️</span>
+                <p class="numb">15</p>
+                <p class="temp-unit"><sup>o</sup>C</p>
+            </div>
         </div>
-      </main>
-      <footer>
-        <p>
-          This project was coded by
-          <a href="#" target="_blank">Your name</a> and is
-          <a href="#" target="_blank"> on GitHub</a> and
-          <a href="#" target="_blank">hosted on Netlify</a>
+        <p class="footer">
+            This project was coded by <a href="">Andisiwe</a> and is on <a href="">GitHub</a> and <a href="">hosted on
+                Netlify</a>
+
         </p>
-      </footer>
     </div>
-  </body>
-  <script src="index.js"></script>
+</body>
+<script src="script.js"></script>
+
 </html>
